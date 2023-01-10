@@ -1,9 +1,9 @@
 const Vimeo = require('@vimeo/player');
 
-const iframe = document.getElementById('vimeo-player');
-const player = new Vimeo.Player(iframe);
+const iframe = document.querySelector('iframe');
+const player = new vimeo(iframe);
 
-player.on('timeupdate', function(data) {
+player.on('play', function () {
   window.localStorage.setItem('videoplayer-current-time', data.seconds);
 });
 
